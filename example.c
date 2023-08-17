@@ -20,6 +20,12 @@ char *hints(const char *buf, int *color, int *bold) {
     return NULL;
 }
 
+int main(/*int argc, char **argv*/) {
+    linenoisePrintKeyCodes();
+    return 0;
+}
+
+#if 0
 int main(int argc, char **argv) {
     char *line;
     char *prgname = argv[0];
@@ -72,3 +78,5 @@ int main(int argc, char **argv) {
     }
     return 0;
 }
+
+#endif

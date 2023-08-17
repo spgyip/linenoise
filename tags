@@ -1,0 +1,111 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BACKSPACE	linenoise.c	/^	BACKSPACE =  127    \/* Backspace *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_A	linenoise.c	/^	CTRL_A = 1,         \/* Ctrl+a *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_B	linenoise.c	/^	CTRL_B = 2,         \/* Ctrl-b *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_C	linenoise.c	/^	CTRL_C = 3,         \/* Ctrl-c *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_D	linenoise.c	/^	CTRL_D = 4,         \/* Ctrl-d *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_E	linenoise.c	/^	CTRL_E = 5,         \/* Ctrl-e *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_F	linenoise.c	/^	CTRL_F = 6,         \/* Ctrl-f *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_H	linenoise.c	/^	CTRL_H = 8,         \/* Ctrl-h *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_K	linenoise.c	/^	CTRL_K = 11,        \/* Ctrl+k *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_L	linenoise.c	/^	CTRL_L = 12,        \/* Ctrl+l *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_N	linenoise.c	/^	CTRL_N = 14,        \/* Ctrl-n *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_P	linenoise.c	/^	CTRL_P = 16,        \/* Ctrl-p *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_T	linenoise.c	/^	CTRL_T = 20,        \/* Ctrl-t *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_U	linenoise.c	/^	CTRL_U = 21,        \/* Ctrl+u *\/$/;"	e	enum:KEY_ACTION	file:
+CTRL_W	linenoise.c	/^	CTRL_W = 23,        \/* Ctrl+w *\/$/;"	e	enum:KEY_ACTION	file:
+ENTER	linenoise.c	/^	ENTER = 13,         \/* Enter *\/$/;"	e	enum:KEY_ACTION	file:
+ESC	linenoise.c	/^	ESC = 27,           \/* Escape *\/$/;"	e	enum:KEY_ACTION	file:
+KEY_ACTION	linenoise.c	/^enum KEY_ACTION{$/;"	g	file:
+KEY_NULL	linenoise.c	/^	KEY_NULL = 0,	    \/* NULL *\/$/;"	e	enum:KEY_ACTION	file:
+LINENOISE_DEFAULT_HISTORY_MAX_LEN	linenoise.c	119;"	d	file:
+LINENOISE_HISTORY_NEXT	linenoise.c	697;"	d	file:
+LINENOISE_HISTORY_PREV	linenoise.c	698;"	d	file:
+LINENOISE_MAX_LINE	linenoise.c	120;"	d	file:
+TAB	linenoise.c	/^	TAB = 9,            \/* Tab *\/$/;"	e	enum:KEY_ACTION	file:
+__LINENOISE_H	linenoise.h	40;"	d
+abAppend	linenoise.c	/^static void abAppend(struct abuf *ab, const char *s, int len) {$/;"	f	file:
+abFree	linenoise.c	/^static void abFree(struct abuf *ab) {$/;"	f	file:
+abInit	linenoise.c	/^static void abInit(struct abuf *ab) {$/;"	f	file:
+abuf	linenoise.c	/^struct abuf {$/;"	s	file:
+atexit_registered	linenoise.c	/^static int atexit_registered = 0; \/* Register atexit just 1 time. *\/$/;"	v	file:
+b	linenoise.c	/^    char *b;$/;"	m	struct:abuf	file:
+buf	linenoise.c	/^    char *buf;          \/* Edited line buffer. *\/$/;"	m	struct:linenoiseState	file:
+buflen	linenoise.c	/^    size_t buflen;      \/* Edited line buffer size. *\/$/;"	m	struct:linenoiseState	file:
+cols	linenoise.c	/^    size_t cols;        \/* Number of columns in terminal. *\/$/;"	m	struct:linenoiseState	file:
+completeLine	linenoise.c	/^static int completeLine(struct linenoiseState *ls) {$/;"	f	file:
+completion	example.c	/^void completion(const char *buf, linenoiseCompletions *lc) {$/;"	f
+completionCallback	linenoise.c	/^static linenoiseCompletionCallback *completionCallback = NULL;$/;"	v	file:
+cvec	linenoise.h	/^  char **cvec;$/;"	m	struct:linenoiseCompletions
+disableRawMode	linenoise.c	/^static void disableRawMode(int fd) {$/;"	f	file:
+enableRawMode	linenoise.c	/^static int enableRawMode(int fd) {$/;"	f	file:
+freeCompletions	linenoise.c	/^static void freeCompletions(linenoiseCompletions *lc) {$/;"	f	file:
+freeHintsCallback	linenoise.c	/^static linenoiseFreeHintsCallback *freeHintsCallback = NULL;$/;"	v	file:
+freeHistory	linenoise.c	/^static void freeHistory(void) {$/;"	f	file:
+getColumns	linenoise.c	/^static int getColumns(int ifd, int ofd) {$/;"	f	file:
+getCursorPosition	linenoise.c	/^static int getCursorPosition(int ifd, int ofd) {$/;"	f	file:
+hints	example.c	/^char *hints(const char *buf, int *color, int *bold) {$/;"	f
+hintsCallback	linenoise.c	/^static linenoiseHintsCallback *hintsCallback = NULL;$/;"	v	file:
+history	linenoise.c	/^static char **history = NULL;$/;"	v	file:
+history_index	linenoise.c	/^    int history_index;  \/* The history index we are currently editing. *\/$/;"	m	struct:linenoiseState	file:
+history_len	linenoise.c	/^static int history_len = 0;$/;"	v	file:
+history_max_len	linenoise.c	/^static int history_max_len = LINENOISE_DEFAULT_HISTORY_MAX_LEN;$/;"	v	file:
+ifd	linenoise.c	/^    int ifd;            \/* Terminal stdin file descriptor. *\/$/;"	m	struct:linenoiseState	file:
+isUnsupportedTerm	linenoise.c	/^static int isUnsupportedTerm(void) {$/;"	f	file:
+len	linenoise.c	/^    int len;$/;"	m	struct:abuf	file:
+len	linenoise.c	/^    size_t len;         \/* Current edited line length. *\/$/;"	m	struct:linenoiseState	file:
+len	linenoise.h	/^  size_t len;$/;"	m	struct:linenoiseCompletions
+linenoise	linenoise.c	/^char *linenoise(const char *prompt) {$/;"	f
+linenoiseAddCompletion	linenoise.c	/^void linenoiseAddCompletion(linenoiseCompletions *lc, const char *str) {$/;"	f
+linenoiseAtExit	linenoise.c	/^static void linenoiseAtExit(void) {$/;"	f	file:
+linenoiseBeep	linenoise.c	/^static void linenoiseBeep(void) {$/;"	f	file:
+linenoiseClearScreen	linenoise.c	/^void linenoiseClearScreen(void) {$/;"	f
+linenoiseCompletionCallback	linenoise.h	/^typedef void(linenoiseCompletionCallback)(const char *, linenoiseCompletions *);$/;"	t
+linenoiseCompletions	linenoise.h	/^typedef struct linenoiseCompletions {$/;"	s
+linenoiseCompletions	linenoise.h	/^} linenoiseCompletions;$/;"	t	typeref:struct:linenoiseCompletions
+linenoiseEdit	linenoise.c	/^static int linenoiseEdit(int stdin_fd, int stdout_fd, char *buf, size_t buflen, const char *prompt)$/;"	f	file:
+linenoiseEditBackspace	linenoise.c	/^void linenoiseEditBackspace(struct linenoiseState *l) {$/;"	f
+linenoiseEditDelete	linenoise.c	/^void linenoiseEditDelete(struct linenoiseState *l) {$/;"	f
+linenoiseEditDeletePrevWord	linenoise.c	/^void linenoiseEditDeletePrevWord(struct linenoiseState *l) {$/;"	f
+linenoiseEditHistoryNext	linenoise.c	/^void linenoiseEditHistoryNext(struct linenoiseState *l, int dir) {$/;"	f
+linenoiseEditInsert	linenoise.c	/^int linenoiseEditInsert(struct linenoiseState *l, char c) {$/;"	f
+linenoiseEditMoveEnd	linenoise.c	/^void linenoiseEditMoveEnd(struct linenoiseState *l) {$/;"	f
+linenoiseEditMoveHome	linenoise.c	/^void linenoiseEditMoveHome(struct linenoiseState *l) {$/;"	f
+linenoiseEditMoveLeft	linenoise.c	/^void linenoiseEditMoveLeft(struct linenoiseState *l) {$/;"	f
+linenoiseEditMoveRight	linenoise.c	/^void linenoiseEditMoveRight(struct linenoiseState *l) {$/;"	f
+linenoiseFree	linenoise.c	/^void linenoiseFree(void *ptr) {$/;"	f
+linenoiseFreeHintsCallback	linenoise.h	/^typedef void(linenoiseFreeHintsCallback)(void *);$/;"	t
+linenoiseHintsCallback	linenoise.h	/^typedef char*(linenoiseHintsCallback)(const char *, int *color, int *bold);$/;"	t
+linenoiseHistoryAdd	linenoise.c	/^int linenoiseHistoryAdd(const char *line) {$/;"	f
+linenoiseHistoryLoad	linenoise.c	/^int linenoiseHistoryLoad(const char *filename) {$/;"	f
+linenoiseHistorySave	linenoise.c	/^int linenoiseHistorySave(const char *filename) {$/;"	f
+linenoiseHistorySetMaxLen	linenoise.c	/^int linenoiseHistorySetMaxLen(int len) {$/;"	f
+linenoiseNoTTY	linenoise.c	/^static char *linenoiseNoTTY(void) {$/;"	f	file:
+linenoisePrintKeyCodes	linenoise.c	/^void linenoisePrintKeyCodes(void) {$/;"	f
+linenoiseRaw	linenoise.c	/^static int linenoiseRaw(char *buf, size_t buflen, const char *prompt) {$/;"	f	file:
+linenoiseSetCompletionCallback	linenoise.c	/^void linenoiseSetCompletionCallback(linenoiseCompletionCallback *fn) {$/;"	f
+linenoiseSetFreeHintsCallback	linenoise.c	/^void linenoiseSetFreeHintsCallback(linenoiseFreeHintsCallback *fn) {$/;"	f
+linenoiseSetHintsCallback	linenoise.c	/^void linenoiseSetHintsCallback(linenoiseHintsCallback *fn) {$/;"	f
+linenoiseSetMultiLine	linenoise.c	/^void linenoiseSetMultiLine(int ml) {$/;"	f
+linenoiseState	linenoise.c	/^struct linenoiseState {$/;"	s	file:
+lndebug	linenoise.c	194;"	d	file:
+main	example.c	/^int main(int argc, char **argv) {$/;"	f
+maxrows	linenoise.c	/^    size_t maxrows;     \/* Maximum num of rows used so far (multiline mode) *\/$/;"	m	struct:linenoiseState	file:
+mlmode	linenoise.c	/^static int mlmode = 0;  \/* Multi line mode. Default is single line. *\/$/;"	v	file:
+ofd	linenoise.c	/^    int ofd;            \/* Terminal stdout file descriptor. *\/$/;"	m	struct:linenoiseState	file:
+oldpos	linenoise.c	/^    size_t oldpos;      \/* Previous refresh cursor position. *\/$/;"	m	struct:linenoiseState	file:
+orig_termios	linenoise.c	/^static struct termios orig_termios; \/* In order to restore at exit.*\/$/;"	v	typeref:struct:termios	file:
+plen	linenoise.c	/^    size_t plen;        \/* Prompt length. *\/$/;"	m	struct:linenoiseState	file:
+pos	linenoise.c	/^    size_t pos;         \/* Current cursor position. *\/$/;"	m	struct:linenoiseState	file:
+prompt	linenoise.c	/^    const char *prompt; \/* Prompt to display. *\/$/;"	m	struct:linenoiseState	file:
+rawmode	linenoise.c	/^static int rawmode = 0; \/* For atexit() function to check if restore is needed*\/$/;"	v	file:
+refreshLine	linenoise.c	/^static void refreshLine(struct linenoiseState *l) {$/;"	f	file:
+refreshMultiLine	linenoise.c	/^static void refreshMultiLine(struct linenoiseState *l) {$/;"	f	file:
+refreshShowHints	linenoise.c	/^void refreshShowHints(struct abuf *ab, struct linenoiseState *l, int plen) {$/;"	f
+refreshSingleLine	linenoise.c	/^static void refreshSingleLine(struct linenoiseState *l) {$/;"	f	file:
+unsupported_term	linenoise.c	/^static char *unsupported_term[] = {"dumb","cons25","emacs",NULL};$/;"	v	file:
