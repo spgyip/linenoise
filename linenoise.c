@@ -213,6 +213,14 @@ static int isUnsupportedTerm(void) {
     return 0;
 }
 
+void checkIflag(struct termios *t, int iflag, const char *iflagName) {
+    printf("iflag: %02X, %s: %02X, is: %d\n", t->c_iflag, iflagName, iflag, (t->c_iflag & iflag)?1:0);
+}
+
+void checkLflag(struct termios *t, int iflag, const char *iflagName) {
+    printf("lflag: %02X, %s: %02X, is: %d\n", t->c_lflag, iflagName, iflag, (t->c_lflag & iflag)?1:0);
+}
+
 /* Raw mode: 1960 magic shit. */
 static int enableRawMode(int fd) {
     struct termios raw;
@@ -225,22 +233,15 @@ static int enableRawMode(int fd) {
     if (tcgetattr(fd,&orig_termios) == -1) goto fatal;
 
     raw = orig_termios;  /* modify the original mode */
+
+    // termios_p->c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP
+    //                         | INLCR | IGNCR | ICRNL | IXON);
+    // termios_p->c_oflag &= ~OPOST;
+    // termios_p->c_lflag &= ~(ECHO | ECHONL | ICANON | ISIG | IEXTEN);
+    // termios_p->c_cflag &= ~(CSIZE | PARENB);
+    // termios_p->c_cflag |= CS8;
     cfmakeraw(&raw);
-
-    /* input modes: no break, no CR to NL, no parity check, no strip char,
-     * no start/stop output control. */
-    //raw.c_iflag &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
-    /* output modes - disable post processing */
-    //raw.c_oflag &= ~(OPOST);
-    /* control modes - set 8 bit chars */
-    //raw.c_cflag |= (CS8);
-    /* local modes - choing off, canonical off, no extended functions,
-     * no signal chars (^Z,^C) */
-    raw.c_lflag &= ~(ECHO | ICANON | IEXTEN | ISIG);
-    /* control chars - set return condition: min number of bytes and timer.
-     * We want read to return every single byte, without timeout. */
-    //raw.c_cc[VMIN] = 1; raw.c_cc[VTIME] = 0; /* 1 byte, no timer */
-
+    
     /* put terminal in raw mode after flushing */
     if (tcsetattr(fd,TCSAFLUSH,&raw) < 0) goto fatal;
     rawmode = 1;
